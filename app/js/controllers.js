@@ -2,14 +2,10 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', [])
+angular.module('photoLibrary')
 
-.controller('HomeController', ['$scope',
-	function($scope) {
-
-		$scope.$watch('images', function() {
-			console.log($scope.images);
-		});
+.controller('HomeController', ['$scope', 'fileReader',
+	function($scope, fileReader) {
 
 		var storage = localStorage["images"];
 		$scope.images = storage ? JSON.parse(storage) : [];
@@ -21,13 +17,11 @@ angular.module('myApp.controllers', [])
 		}
 
 		$scope.onFileSelect = function($files) {
-			var reader = new FileReader();
-			reader.readAsDataURL($files[0]);
-			reader.onload = function (e) {
-				$scope.images.push(e.target.result);
-				console.log($scope.images);
+			fileReader.readAsDataUrl($files[0], $scope)
+			.then(function(result) {
+				$scope.images.push(result);
 				localStorage["images"] = JSON.stringify($scope.images);
-			}
+			});
 		};
 
 	}]);

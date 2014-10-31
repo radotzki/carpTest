@@ -3,7 +3,7 @@
 .dropfile.hover{border-color: #aac3cc}
 .dropingfile{border:2px dashed #000;}
 
-.pointer-cursor{cursor: pointer;}
-.img-rounded {height:100px; width:100px; margin-bottom:10px}
+.delete-btn{cursor: pointer; color: red}
+.img-thumbnail {height:150px; width:150px; margin-bottom:10px}
 
 

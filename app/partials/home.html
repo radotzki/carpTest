@@ -4,9 +4,9 @@
 
 <div class="col-lg-8 col-lg-offset-2">
 	<div ng-repeat="image in images">
-		<div class="col-lg-4">
-			<img class="img-rounded" src="{{image}}" />
-			<a ng-click="deleteImage(image)" class="pointer-cursor"> delete </a>
+		<div class="col-lg-3 form-horizontal text-center">
+			<img class="img-thumbnail form-group" src="{{image}}" />
+			<a ng-click="deleteImage(image)" class="delete-btn form-group"> delete </a>
 		</div>
 	</div>
 </div>

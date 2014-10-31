@@ -1,7 +1,8 @@
 'use strict';
 
-// Declare app level module which depends on filters, and services
-angular.module('myApp', ['myApp.controllers', 'angularFileUpload'])
+angular.module('photoLibrary', ['angularFileUpload']);
+
+angular.module('myApp', ['photoLibrary'])
 
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $location) {
 	$location.html5Mode(true).hashPrefix('!');
