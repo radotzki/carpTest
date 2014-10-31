@@ -1,18 +1,14 @@
 
-
-<div style="padding-bottom:200px" ng-file-drop="onFileSelect($files)" ng-file-drag-over-class="dropfile">
-	Drop image here
+<div ng-file-drop="onFileSelect($files)" class="dropfile col-lg-8 col-lg-offset-2" ng-file-drag-over-class="dropingfile">
 </div>
 
-
-<!-- Images -->
-<div class="col-lg-8">
+<div class="col-lg-8 col-lg-offset-2">
 	<div ng-repeat="image in images">
-		<div class="col-lg-3">
+		<div class="col-lg-4">
 			<img class="img-rounded" src="{{image}}" />
+			<a ng-click="deleteImage(image)" class="pointer-cursor"> delete </a>
 		</div>
 	</div>
-	<p ng-show="images.length==0"> No images </p>
 </div>
 
 

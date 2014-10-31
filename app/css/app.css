@@ -1,3 +1,9 @@
 
-.dropfile{border:2px dashed #e0e4e8;text-align: center;min-height: 20px}
+.dropfile{border:2px dashed #e0e4e8;text-align: center;min-height: 20px; padding-bottom: 100px; margin-bottom: 30px}
 .dropfile.hover{border-color: #aac3cc}
+.dropingfile{border:2px dashed #000;}
+
+.pointer-cursor{cursor: pointer;}
+.img-rounded {height:100px; width:100px; margin-bottom:10px}
+
+

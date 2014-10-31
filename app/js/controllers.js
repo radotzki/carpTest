@@ -5,20 +5,32 @@
 angular.module('myApp.controllers', [])
 
 .controller('HomeController', ['$scope',
- function($scope) {
+	function($scope) {
 
-  $scope.images = [];
+		$scope.$watch('images', function() {
+			console.log($scope.images);
+		});
 
-  $scope.onFileSelect = function($files) {
-    var reader = new FileReader();
-    reader.readAsDataURL($files[0]);
-    reader.onload = function (e) {
-      console.log(e.target.result);
-      $scope.images.push(e.target.result);
-    }
-  };
+		var storage = localStorage["images"];
+		$scope.images = storage ? JSON.parse(storage) : [];
 
-}]);
+		$scope.deleteImage = function(image){
+			var index = $scope.images.indexOf(image);
+			$scope.images.splice(index,1);
+			localStorage["images"] = JSON.stringify($scope.images);
+		}
+
+		$scope.onFileSelect = function($files) {
+			var reader = new FileReader();
+			reader.readAsDataURL($files[0]);
+			reader.onload = function (e) {
+				$scope.images.push(e.target.result);
+				console.log($scope.images);
+				localStorage["images"] = JSON.stringify($scope.images);
+			}
+		};
+
+	}]);
 
 
 
