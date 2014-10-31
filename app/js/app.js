@@ -1,7 +1,5 @@
 'use strict';
 
-angular.module('photoLibrary', ['angularFileUpload', 'compressImage']);
-
 angular.module('myApp', ['photoLibrary'])
 
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $location) {
