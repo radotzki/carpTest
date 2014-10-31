@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('photoLibrary', ['angularFileUpload']);
+angular.module('photoLibrary', ['angularFileUpload', 'compressImage']);
 
 angular.module('myApp', ['photoLibrary'])
 
