@@ -1,14 +1,19 @@
 'use strict';
 
-angular.module('myApp', ['photoLibrary'])
+angular.module('test', [])
+angular.module('myApp', ['test'])
 
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $location) {
 	$location.html5Mode(true).hashPrefix('!');
 
-	$routeProvider.
-	when('/home', {
-		templateUrl: 'partials/home.html',
-		controller: 'HomeController'
+	$routeProvider
+	.when('/test', {
+		templateUrl: 'partials/test.html',
+		controller: 'TestController'
 	})
-	.otherwise({redirectTo: '/home'});
+	.when('/finish', {
+		templateUrl: 'partials/finish.html',
+		controller: 'FinishController'
+	})
+	.otherwise({redirectTo: '/test'});
 }])

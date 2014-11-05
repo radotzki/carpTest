@@ -1,0 +1,86 @@
+<div class="col-lg-4 col-lg-offset-4">
+<div class="well" ng-show="explainMsg">
+		<p class="muted" dir="rtl"> {{explainMsg}} </p>
+	</div>
+	
+	<div class="panel panel-default" dir="rtl">
+		<div class="panel-heading">
+			{{level.q}}
+		</div>
+		<ul class="list-group" style="padding-right:0px">
+			<li class="list-group-item">
+				<span>{{level.a[0]}}</span>
+				<select class="form-control" ng-model="rank.0" style="display:inline; width:inherit;">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</select>
+			</li>
+
+			<li class="list-group-item">
+				<span>{{level.a[1]}}</span>
+				<select class="form-control" ng-model="rank.1" style="display:inline; width:inherit;">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</select>
+			</li>
+
+			<li class="list-group-item">
+				<span>{{level.a[2]}}</span>
+				<select class="form-control" ng-model="rank.2" style="display:inline; width:inherit;">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</select>
+			</li>
+
+			<li class="list-group-item">
+				<span>{{level.a[3]}}</span>
+				<select class="form-control" ng-model="rank.3" style="display:inline; width:inherit;">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</select>
+			</li>
+
+			<li class="list-group-item">
+				<span>{{level.a[4]}}</span>
+				<select class="form-control" ng-model="rank.4" style="display:inline; width:inherit;">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</select>
+			</li>
+
+			<li class="list-group-item">
+				<span>{{level.a[5]}}</span>
+				<select class="form-control" ng-model="rank.5" style="display:inline; width:inherit;">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</select>
+			</li>
+		</ul>
+	</div>
+	<p style="color:pink" dir="rtl"> {{errorMsg}} </p>
+	<button type="button" ng-click="next(rank)" class="btn btn-primary btn-block">המשך</button>
+</div>
